@@ -598,7 +598,7 @@ h2, header nav a, header .kicker, footer .lockup a, #h_small #nav_small a, #h_sm
   .logo {
     height: 70px;
     width: 70px;
-    background: url(../img/GOC1.png) center center;
+    background: url(../img/ms_logo.png) center center;
     background-size: 70px 47px;
     background-repeat: no-repeat;
     position: fixed;
@@ -628,10 +628,10 @@ h2, header nav a, header .kicker, footer .lockup a, #h_small #nav_small a, #h_sm
   .logo {
     height: 90px;
     width: 90px;
-    background: url(../img/GOC1.png) center center;
-    width: 88px;
-    height: 47px;
-    background-size: 88px 47px;
+    background: url(../img/ms_logo.png) center center;
+    width: 150px;
+    height: 120px;
+    background-size: 150px 120px;
     background-repeat: no-repeat;
     float: left;
     margin: 30px 0 0 30px; } }
@@ -664,7 +664,7 @@ header {
         color: black; }
   header h1 {
     text-align: center;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.85);
     text-transform: uppercase;
     letter-spacing: 0.05cm;
     margin-bottom: 20px;
@@ -742,7 +742,7 @@ footer {
       height: 180px;
       width: 180px;
       border-radius: 50%;
-      background: url(../img/android.JPG);
+      background: url(../img/ms_logo.png);
       margin: auto; }
     .about-lock .flip-container {
       -webkit-perspective: 1000;
