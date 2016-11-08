@@ -637,7 +637,7 @@ h2, header nav a, header .kicker, footer .lockup a, #h_small #nav_small a, #h_sm
     margin: 30px 0 0 30px; } }
 
 header {
-  background: url(../img/galway2.jpg) center center;
+  background: url(../img/pebbles2.jpg) center center;
   background-size: cover; }
   @media only screen and (min-width: 220px) {
     header {
@@ -732,7 +732,6 @@ footer {
       display: -webkit-box;
       display: -moz-box;
       display: box;
-      display: -webkit-flex;
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
@@ -753,7 +752,6 @@ footer {
       border-radius: 50%;
       -webkit-box-ordinal-group: 3;
       box-ordinal-group: 3;
-      -webkit-order: 3;
       -moz-order: 3;
       order: 3;
       -ms-flex-order: 3; }
@@ -798,14 +796,12 @@ footer {
     display: -webkit-box;
     display: -moz-box;
     display: box;
-    display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
     margin: 0 auto;
     -webkit-box-align: center;
     box-align: center;
-    -webkit-align-items: center;
     -moz-align-items: center;
     -ms-align-items: center;
     -o-align-items: center;
@@ -813,7 +809,6 @@ footer {
     -ms-flex-align: center;
     -webkit-box-pack: justify;
     box-pack: justify;
-    -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     -o-justify-content: space-between;
@@ -822,7 +817,6 @@ footer {
     .about-lock .flaticon-cogwheel28 {
       -webkit-box-ordinal-group: 1;
       box-ordinal-group: 1;
-      -webkit-order: 1;
       -moz-order: 1;
       order: 1;
       -ms-flex-order: 1;
@@ -830,7 +824,6 @@ footer {
     .about-lock .flaticon-computer1 {
       -webkit-box-ordinal-group: 2;
       box-ordinal-group: 2;
-      -webkit-order: 2;
       -moz-order: 2;
       order: 2;
       -ms-flex-order: 2;
@@ -838,7 +831,6 @@ footer {
     .about-lock .flaticon-hosting {
       -webkit-box-ordinal-group: 4;
       box-ordinal-group: 4;
-      -webkit-order: 4;
       -moz-order: 4;
       order: 4;
       -ms-flex-order: 4;
@@ -846,7 +838,6 @@ footer {
     .about-lock .flaticon-computers13 {
       -webkit-box-ordinal-group: 5;
       box-ordinal-group: 5;
-      -webkit-order: 5;
       -moz-order: 5;
       order: 5;
       -ms-flex-order: 5;
@@ -885,13 +876,11 @@ footer {
   display: -webkit-box;
   display: -moz-box;
   display: box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: distribute;
   box-pack: distribute;
-  -webkit-justify-content: space-around;
   -moz-justify-content: space-around;
   -ms-justify-content: space-around;
   -o-justify-content: space-around;
@@ -1244,13 +1233,11 @@ form {
   display: -webkit-box;
   display: -moz-box;
   display: box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   box-align: center;
-  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   -o-align-items: center;
@@ -1258,7 +1245,6 @@ form {
   -ms-flex-align: center;
   -webkit-box-pack: justify;
   box-pack: justify;
-  -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
@@ -1273,14 +1259,12 @@ form {
     display: -webkit-box;
     display: -moz-box;
     display: box;
-    display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
     margin: 10 auto;
     -webkit-box-align: center;
     box-align: center;
-    -webkit-align-items: center;
     -moz-align-items: center;
     -ms-align-items: center;
     -o-align-items: center;
@@ -1288,7 +1272,6 @@ form {
     -ms-flex-align: center;
     -webkit-box-pack: justify;
     box-pack: justify;
-    -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     -o-justify-content: space-between;
@@ -1376,7 +1359,7 @@ form {
 
 #h_small {
   height: 170px;
-  background: url(../img/galway2.jpg) center center;
+  background: url(../img/pebbles2.jpg) center center;
   background-size: cover; }
   #h_small #nav_small {
     float: right;
