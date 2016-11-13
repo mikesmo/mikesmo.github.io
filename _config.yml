@@ -2,3 +2,4 @@ name: Michael Smolenski
 markdown: redcarpet
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 gems: [jekyll-paginate]
+comments: true

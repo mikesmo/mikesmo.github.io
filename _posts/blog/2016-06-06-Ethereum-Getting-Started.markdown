@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Getting Started with Ethereum"
-date:   2016-06-06
+date:   2016-06-06 18:11:16
 categories: blog
 ---
 
