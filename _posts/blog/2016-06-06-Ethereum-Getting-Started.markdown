@@ -25,7 +25,7 @@ The steps for other platforms can be found here:
 After installation, test that all is working by running **geth** the Command Line Interface.
 
 ```shell
-$ geth --port 3000 console
+$ geth console
 $ exit
 ```
 
@@ -37,7 +37,7 @@ First we will create a genesis file, which will be used to build your own privat
 ~/dev/ethereum-demo/genesis.json
 ```
 
-In the file, add the following content:
+In this file, add the following content:
 
 ```json
 {  
@@ -52,39 +52,31 @@ In the file, add the following content:
 }
 ```
 
-We will use another console line tab for outputting the logging output from our **testnet**.
 
-Note: Having another console tab for logging is not necessary, but it will help keep the screen clear of a lot of logging messages from mining and such forth that can clutter the screen.
-
-To identify the current command window enter:
+In the console type:
 
 ```shell
-$ tty  
- /dev/ttys000
+$ geth --datadir ~/.ethereum init ~/dev/ethereum-demo/genesis.json
 ```
-
-Then open a new console tab and type:
-
-```shell
-$ geth --port 3000 --genesis ~/dev/ethereum-demo/genesis.json --datadir "~/dev/ethereum-demo/ethereum-data" --networkid 123 --nodiscover --maxpeers 0 console 2 >> /dev/ttys000  
-$ exit
-```
-
-Note: Your console tab identifier may be different if you.
 
 Now you will have a private blockchain database setup in the using a custom genesis block.
 
 ### Creating an Account and adding some Ether
 
-We have now created a private blockchain. Next we will create a **coinbase** account and load it with ether in order to execute transaction. First we create the account and then update the genesis file with an initial balance for that account.
+Now that we have created a private blockchain. Next we will create a **coinbase** account and load it with ether in order to execute transaction. First we create the account and then update the genesis file with an initial balance for that account.
+
+
+
 
 Create a file the contains the account password, and then we use the file to create a new account.
 
 ```shell
-$ sudo echo "pa55w0rd123" >> ethereum_pwd.txt  
+$ sudo echo "pa55w0rd123" >> ethereum_pwd.txt 
 $ geth --datadir "~/dev/ethereum-demo/ethereum-data" --password ~/dev/ethereum-demo/ethereum_pwd.txt account new  
   Address: {5f94e3b516fc5ddc9f808e5fa8a3a1b5e85e34d5}
 ```
+
+Note: Your console tab identifier may be different if you.
 
 The output is the new hash address of the new account. It’s probably better to invent your own password than use mine ;-)
 
@@ -110,10 +102,32 @@ Now edit the genesis file with the new address and allocate a balance, like so:
 
 Note: the **alloc** address that you will use, will be different than the one above.
 
-Now check the account balance:
+Now we will check the account balance. But before we do this we will setup another console tab for logging the output from our **testnet**.
+
+Note: Having another console for logging is not necessary, but it will help keep the screen clear of a lot of logging messages from mining and such forth that can clutter the screen.
+
+Open a new console and identify the window:
 
 ```shell
-$ geth --port 3000 --genesis ~/dev/ethereum-demo/genesis.json --datadir "~/dev/ethereum-demo/ethereum-data" --networkid 123 --password ~/dev/ethereum-demo/ethereum_pwd.txt --unlock 0 console 2>> /dev/ttys000  
+$ tty  
+ /dev/ttys000
+```
+
+Now run geth again by using the result from the tty command above for logging to the new window
+
+```shell
+$ geth --datadir "~/dev/ethereum-demo/ethereum-data" --nodiscover --password ~/dev/ethereum-demo/ethereum_pwd.txt --unlock 0 console 2 >> /dev/ttys000
+```
+
+Then we start mining the first block
+
+```shell
+$ miner.start(); admin.sleepBlocks(1); miner.stop();
+```
+
+Note: The first time you start mining will take some time as your node will need to generate a 1GB dataset for the Proof of Work algorithm. You will see _“generating DAG”_ messages in the other console log, which took about 8 minutes on my laptop. You can read more about this here: [https://github.com/ethereum/wiki/wiki/Ethash-DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG)
+
+```shell
 $ balance = eth.getBalance(eth.coinbase)  
   10000000000000000000  
 $ web3.fromWei(balance, "ether")  
@@ -177,13 +191,11 @@ This returns a hash for this transaction, but the contract hasn’t been deploye
 
 Altering the state of the Ethereum blockchain, such as deploying a contract, only can occur when transactions are validated and executed by miners.
 
-So next we tell our private testnet to start mining and stop after creating a block:
+So next we tell our private testnet to start mining in order to update the **testne** with our new contract and stop after creating one block:
 
 ```shell
 $ miner.start(); admin.sleepBlocks(1); miner.stop();
 ```
-
-Note: The first time you start mining will take some time as your node will need to generate a 1GB dataset for the Proof of Work algorithm. You will see _“generating DAG”_ messages in the other console log, which took about 8 minutes on my laptop. You can read more about this here: [https://github.com/ethereum/wiki/wiki/Ethash-DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG)
 
 #### Interacting with the contract
 
@@ -272,7 +284,7 @@ $ spanish_gretter.greet();
 
 There you have it, we have created two simple contracts.
 
-I hope this has been helpful and I’d appreciate any of your feedback or comments if I have made a mistake.
+I hope this has been helpful and I’d appreciate any of your feedback if I've made any mistakes etc.
 
 Thanks.
 
