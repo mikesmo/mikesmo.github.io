@@ -65,9 +65,6 @@ Now you will have a private blockchain database setup in the using a custom gene
 
 Now that we have created a private blockchain. Next we will create a **coinbase** account and load it with ether in order to execute transaction. First we create the account and then update the genesis file with an initial balance for that account.
 
-
-
-
 Create a file the contains the account password, and then we use the file to create a new account.
 
 ```shell
@@ -75,8 +72,6 @@ $ sudo echo "pa55w0rd123" >> ethereum_pwd.txt
 $ geth --datadir "~/dev/ethereum-demo/ethereum-data" --password ~/dev/ethereum-demo/ethereum_pwd.txt account new  
   Address: {5f94e3b516fc5ddc9f808e5fa8a3a1b5e85e34d5}
 ```
-
-Note: Your console tab identifier may be different if you.
 
 The output is the new hash address of the new account. It’s probably better to invent your own password than use mine ;-)
 
@@ -102,35 +97,27 @@ Now edit the genesis file with the new address and allocate a balance, like so:
 
 Note: the **alloc** address that you will use, will be different than the one above.
 
-Now we will check the account balance. But before we do this we will setup another console tab for logging the output from our **testnet**.
+Now we will check the account balance. But before we do this we will setup another console tab for logging the output from our **testnet**. 
 
-Note: Having another console for logging is not necessary, but it will help keep the screen clear of a lot of logging messages from mining and such forth that can clutter the screen.
-
-Open a new console and identify the window:
+Run the following geth command to start the interactive command session: 
 
 ```shell
-$ tty  
- /dev/ttys000
+$ geth --datadir "~/dev/ethereum-demo/ethereum-data" --nodiscover --password ~/dev/ethereum-demo/ethereum_pwd.txt --unlock 0 console
 ```
 
-Now run geth again by using the result from the tty command above for logging to the new window
+Type the following to start mining the first block:
 
 ```shell
-$ geth --datadir "~/dev/ethereum-demo/ethereum-data" --nodiscover --password ~/dev/ethereum-demo/ethereum_pwd.txt --unlock 0 console 2 >> /dev/ttys000
+> miner.start(); admin.sleepBlocks(1); miner.stop();
 ```
 
-Then we start mining the first block
+The first time you start mining will take some time to complete as your node will need to generate a 1GB dataset for the Proof of Work algorithm. You will see _“generating DAG”_ messages in the other console log, which took about 8 minutes on my laptop. 
+You can read more about this here: [https://github.com/ethereum/wiki/wiki/Ethash-DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG)
 
 ```shell
-$ miner.start(); admin.sleepBlocks(1); miner.stop();
-```
-
-Note: The first time you start mining will take some time as your node will need to generate a 1GB dataset for the Proof of Work algorithm. You will see _“generating DAG”_ messages in the other console log, which took about 8 minutes on my laptop. You can read more about this here: [https://github.com/ethereum/wiki/wiki/Ethash-DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG)
-
-```shell
-$ balance = eth.getBalance(eth.coinbase)  
+> balance = eth.getBalance(eth.coinbase)  
   10000000000000000000  
-$ web3.fromWei(balance, "ether")  
+> web3.fromWei(balance, "ether")  
   10
 ```
 
@@ -169,8 +156,8 @@ The first step is to compile the contract using the command line, but in order t
 Using the **solidity** compiler, we compile the contract.
 
 ```shell
-$ multiply_source = "contract multiplier { function multiply(uint a) constant returns(uint d) { return a * 7; } }";  
-$ multiply_compiled = eth.compile.solidity(multiply_source);
+> multiply_source = "contract multiplier { function multiply(uint a) constant returns(uint d) { return a * 7; } }";  
+> multiply_compiled = eth.compile.solidity(multiply_source);
 ```
 
 This gives two pieces of important information needed for creating and using our contract.
@@ -181,10 +168,10 @@ This gives two pieces of important information needed for creating and using our
 We will store these in separate variables called **binary** and **abi.** Then we create the contract by sending a transaction message to the blockchain using the account we just created. When we send the contract we have to specify the maximum gas we are prepared to pay. But since this is a testnet and won’t cost us anything, we just set this at an arbitrary high number in order for the transaction to execute.
 
 ```shell
-$ primary = eth.accounts[0];  
-$ binary = multiply_compiled.multiplier.code;  
-$ abi = multiply_compiled.multiplier.info.abiDefinition;  
-$ transaction_hash = eth.sendTransaction({from: primary, data: binary, gas: 1000000});
+> primary = eth.accounts[0];  
+> binary = multiply_compiled.multiplier.code;  
+> abi = multiply_compiled.multiplier.info.abiDefinition;  
+> transaction_hash = eth.sendTransaction({from: primary, data: binary, gas: 1000000});
 ```
 
 This returns a hash for this transaction, but the contract hasn’t been deployed yet. We have to mine a block for that to happen.
@@ -194,7 +181,7 @@ Altering the state of the Ethereum blockchain, such as deploying a contract, onl
 So next we tell our private testnet to start mining in order to update the **testne** with our new contract and stop after creating one block:
 
 ```shell
-$ miner.start(); admin.sleepBlocks(1); miner.stop();
+> miner.start(); admin.sleepBlocks(1); miner.stop();
 ```
 
 #### Interacting with the contract
@@ -202,7 +189,7 @@ $ miner.start(); admin.sleepBlocks(1); miner.stop();
 Now that the contact has been deployed, we need to know its address in order to communicate with it. We do this using the transaction hash.
 
 ```shell
-$ transaction_receipt = eth.getTransactionReceipt(transaction_hash);
+> transaction_receipt = eth.getTransactionReceipt(transaction_hash);
 ```
 
 The transaction receipt will show the **blockNumber** that the miner deployed the contract to, the **contractAddress** and the amount of **gasUsed** that would have been used if it were deployed on the public blockchain.
@@ -215,9 +202,9 @@ Gas fees can be found here:
 Now we use the **abi** and **contract** **address** to create an instance of the contract and communicate with the contracts _multiply()_ function.
 
 ```shell
-$ contract_address = transaction_receipt.contractAddress;  
-$ multiplyBy7 = eth.contract(abi).at(contract_address);  
-$ multiplyBy7.multiply.call(6);  
+> contract_address = transaction_receipt.contractAddress;  
+> multiplyBy7 = eth.contract(abi).at(contract_address);  
+> multiplyBy7.multiply.call(6);  
   42
 ```
 
@@ -262,24 +249,24 @@ However, this time the contract has a constructor that is used to create the con
 ![Greeter](/assets/img/blog/spanish-greeter.png)
 
 ```shell
-$ greeter_source = 'contract mortal { address owner; ...'  
-$ greeter_compiled = eth.compile.solidity(greeter_source);  
-$ binary = greeter_compiled.greeter.code;  
-$ abi = greeter_compiled.greeter.info.abiDefinition;
+> greeter_source = 'contract mortal { address owner; ...'  
+> greeter_compiled = eth.compile.solidity(greeter_source);  
+> binary = greeter_compiled.greeter.code;  
+> abi = greeter_compiled.greeter.info.abiDefinition;
 ```
 
 ```shell
-$ Greeter = eth.contract(abi);  
-$ transaction = Greeter.new('Hola', {from:primary, data: binary, gas: 1000000});
+> Greeter = eth.contract(abi);  
+> transaction = Greeter.new('Hola', {from:primary, data: binary, gas: 1000000});
 ```
 
 Now we mine the contract and test that it works as expected.
 
 ```shell
-$ miner.start(); admin.sleepBlocks(1); miner.stop();  
-$ transaction_receipt = eth.getTransactionReceipt(transaction.transactionHash);  
-$ spanish_gretter = Greeter.at(transaction_receipt.contractAddress);  
-$ spanish_gretter.greet();
+> miner.start(); admin.sleepBlocks(1); miner.stop();  
+> transaction_receipt = eth.getTransactionReceipt(transaction.transactionHash);  
+> spanish_gretter = Greeter.at(transaction_receipt.contractAddress);  
+> spanish_gretter.greet();
 ```
 
 There you have it, we have created two simple contracts.
