@@ -12,7 +12,7 @@ In this tutorial I’ll show you step by step how to get started with Ethereum b
 First we’ll download the client tools for running a node on your computer. Official instructions for installing the tool can be found here: 
 [Ethereum client tools](https://www.ethereum.org/cli)
 
-I use a mac, so commands for me were quite simple:
+I use a mac, so commands for me were quite simple using the brew package manager:
 
 ```shell
 $ brew tap ethereum/ethereum
@@ -56,24 +56,24 @@ In this file, add the following content:
 In the console type:
 
 ```shell
-$ geth --datadir ~/.ethereum init ~/dev/ethereum-demo/genesis.json
+$ geth --datadir ~/dev/ethereum-demo init ~/dev/ethereum-demo/genesis.json
 ```
 
-Now you will have a private blockchain database setup in the using a custom genesis block.
+You will now have a private blockchain database setup in the using the custom genesis block.
 
 ### Creating an Account and adding some Ether
 
 Now that we have created a private blockchain. Next we will create a **coinbase** account and load it with ether in order to execute transaction. First we create the account and then update the genesis file with an initial balance for that account.
 
-Create a file the contains the account password, and then we use the file to create a new account.
+Create a file the contains the account password, and then we use this file to create a new account.
 
 ```shell
 $ sudo echo "pa55w0rd123" >> ethereum_pwd.txt 
-$ geth --datadir "~/dev/ethereum-demo/ethereum-data" --password ~/dev/ethereum-demo/ethereum_pwd.txt account new  
+$ geth --datadir ~/dev/ethereum-demo/ethereum-data --password ~/dev/ethereum-demo/ethereum_pwd.txt account new  
   Address: {5f94e3b516fc5ddc9f808e5fa8a3a1b5e85e34d5}
 ```
 
-The output is the new hash address of the new account. It’s probably better to invent your own password than use mine ;-)
+Invent your own password rather than use mine above. The output is the new hash address of the new account.
 
 Now edit the genesis file with the new address and allocate a balance, like so:
 
@@ -97,12 +97,10 @@ Now edit the genesis file with the new address and allocate a balance, like so:
 
 Note: the **alloc** address that you will use, will be different than the one above.
 
-Now we will check the account balance. But before we do this we will setup another console tab for logging the output from our **testnet**. 
-
-Run the following geth command to start the interactive command session: 
+Now we will check the account balance. Run the following geth command to start the interactive command session. 
 
 ```shell
-$ geth --datadir "~/dev/ethereum-demo/ethereum-data" --nodiscover --password ~/dev/ethereum-demo/ethereum_pwd.txt --unlock 0 console
+$ geth --datadir ~/dev/ethereum-demo/ethereum-data --nodiscover --password ~/dev/ethereum-demo/ethereum_pwd.txt --unlock 0 console
 ```
 
 Type the following to start mining the first block:
