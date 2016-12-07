@@ -1,5 +1,5 @@
 =============================
-Sleek Blog
+Michael's Blog
 =============================
 
 [Live Website](https://mikesmo.github.io/)
