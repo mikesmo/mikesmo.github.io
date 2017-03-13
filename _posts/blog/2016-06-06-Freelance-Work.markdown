@@ -7,7 +7,7 @@ categories: blog
 
 Well, I'm writing this blog post to mark the beginning of a journey that I'm about to take working as a Freelancer / Digital Nomad.
  
-I have just filled out the application form with [TopTal](https://www.toptal.com/web) after a friend's recommendation. 
+I have just filled out the application form with Toptal's [Web Freelancers Network](https://www.toptal.com/web) after a friend's recommendation. 
 It took a while to gather all the information about my experience over the past 17 years, working for various
 tech companies and places around the world. I'm still left with a nagging feeling that I haven't given the 
 most clear picture of the depth of my knowledge and experience.
