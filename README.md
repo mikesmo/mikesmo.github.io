@@ -30,5 +30,6 @@ This will give you file watching, browser synchronisation, auto-rebuild, CSS inj
 ```shell
 $ rvm use 2.1.4
 $ nvm use 4.3
+$ gem install jekyll-paginate  
 $ gulp
 ```

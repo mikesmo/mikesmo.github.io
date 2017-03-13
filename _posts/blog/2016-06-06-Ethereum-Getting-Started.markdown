@@ -139,7 +139,7 @@ contract multiplier {
 
 First we compile the contract and then we will deploy it on our own **testnet** by mining. The following diagram depicts this process:
 
-![Multiplier](/assets/img/blog/multiplier.png)
+![Multiplier](/assets/img/blog/2016-06-06-Ethereum-Getting-Started/multiplier.png)
 
 #### Compiling and deploying the contract.
 
@@ -244,7 +244,7 @@ In the previous example, the contract didn’t have a constructor, so we could d
 
 However, this time the contract has a constructor that is used to create the contract during deployment. So we have to use the ABI definition in order to send the right parameters in a transaction to the contract’s constructor using the _new()_ function.
 
-![Greeter](/assets/img/blog/spanish-greeter.png)
+![Greeter](/assets/img/blog/2016-06-06-Ethereum-Getting-Started/spanish-greeter.png)
 
 ```shell
 > greeter_source = 'contract mortal { address owner; ...'  
