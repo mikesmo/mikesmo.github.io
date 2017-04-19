@@ -8,14 +8,14 @@ categories: blog
 For the last 6 months I have been pretty busy developing a new technology that I've called <b>Permissioned Blocks</b>. This technology brings 
 privacy, security and confidentiality to blockchains when using smart contracts.
 
-Today, I am  proud to say that I have completed the first working version.
+Today, I am proud to say that I have completed the first working version and have produced a video to demonstrate permissioned blocks in action.
 
-There is also a white paper detailing the engineering behind the software and its full capabilities.
+There is also a white paper draft detailing the engineering behind the technology that I am writing that will accompany this demo.
 
 To summarise:
 
-- A folk of IPFS has been used for securely storing smart contract state information.
-- Using IPFS provides a decoupled and modular design, so that any blockchain that has smart contract features (Ethereum, Hyperledger etc) can use this technology.
+- A folk of [IPFS](https://ipfs.io/) has been used for securely storing smart contract state information.
+- Using [IPFS](https://ipfs.io/) provides a decoupled and modular design, so that any blockchain that has smart contract features ([Ethereum](https://www.ethereum.org/), [Hyperledger](https://www.hyperledger.org/) etc) can use this technology.
 - Multiple users can be granted various smart contract roles.
 - No state information is stored on a smart contract. 
 
