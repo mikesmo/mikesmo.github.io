@@ -10,23 +10,22 @@ privacy, security and confidentiality when using smart contracts on public block
 
 Today, I am proud to say that I have completed the first working version of this technology and have produced a video to demonstrate permissioned blocks in action.
 
-There is also a white paper draft detailing the engineering behind the technology that can be found here.
-[White Paper](https://github.com/autocontracts/permissioned-blocks/blob/feature/initial_draft/whitepaper.md) 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Zt9DIopmzbA" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+The white paper draft detailing the engineering behind the technology that can be found here:
+
+[Permissioned Blocks White Paper](https://github.com/autocontracts/permissioned-blocks/blob/feature/initial_draft/whitepaper.md) 
 
 Highlights:
 
 - 100% privacy of smart contract functional state information.
-- Decentralised solution using a folk of [IPFS](https://ipfs.io/) for secure storage of smart contract functional state information.
-- Compatible with any Turing Complete blockchain (e.g. [Ethereum](https://www.ethereum.org/), [Hyperledger](https://www.hyperledger.org/) etc). Decoupled and modular design.
-- Multi user/role capability security model.  
+- Decentralised solution using a folk of [IPFS](https://ipfs.io/) for the secure storage of smart contract state.
+- Compatible with any Turing Complete blockchain (e.g. [Ethereum](https://www.ethereum.org/), [Hyperledger](https://www.hyperledger.org/)). Decoupled and modular design.
+- Multi user/role security capability model.  
 
-Below is a short video that demonstrates permissioned blocks in action:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Zt9DIopmzbA" frameborder="0" allowfullscreen></iframe>
-
-<br>
 A docker image of this demo will be provided shortly on Github, where you can also run this demo.
-
 
 Please feel free to post any constructive comments or questions below and I'll do my best to reply.
 
