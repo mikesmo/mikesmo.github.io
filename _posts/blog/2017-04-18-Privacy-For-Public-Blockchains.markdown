@@ -1,23 +1,24 @@
 ---
 layout: post
-title:  "Bringing Privacy To Public Blockchains"
+title:  "Permissioned Blocks: Bringing Privacy To Public Blockchains"
 date:   2016-04-18 18:00:00
 categories: blog
 ---
 
 For the last 6 months I have been pretty busy developing a new technology that I've called <b>Permissioned Blocks</b>. This technology brings 
-privacy, security and confidentiality to blockchains when using smart contracts.
+privacy, security and confidentiality when using smart contracts on public blockchains such as Ethereum. 
 
-Today, I am proud to say that I have completed the first working version and have produced a video to demonstrate permissioned blocks in action.
+Today, I am proud to say that I have completed the first working version of this technology and have produced a video to demonstrate permissioned blocks in action.
 
-There is also a white paper draft detailing the engineering behind the technology that I am writing that will accompany this demo.
+There is also a white paper draft detailing the engineering behind the technology that can be found here.
+[White Paper](https://github.com/autocontracts/permissioned-blocks/blob/feature/initial_draft/whitepaper.md) 
 
-To summarise:
+Highlights:
 
-- A folk of [IPFS](https://ipfs.io/) has been used for securely storing smart contract state information.
-- Using [IPFS](https://ipfs.io/) provides a decoupled and modular design, so that any blockchain that has smart contract features ([Ethereum](https://www.ethereum.org/), [Hyperledger](https://www.hyperledger.org/) etc) can use this technology.
-- Multiple users can be granted various smart contract roles.
-- No state information is stored on a smart contract. 
+- 100% privacy of smart contract functional state information.
+- Decentralised solution using a folk of [IPFS](https://ipfs.io/) for secure storage of smart contract functional state information.
+- Compatible with any Turing Complete blockchain (e.g. [Ethereum](https://www.ethereum.org/), [Hyperledger](https://www.hyperledger.org/) etc). Decoupled and modular design.
+- Multi user/role capability security model.  
 
 Below is a short video that demonstrates permissioned blocks in action:
 
