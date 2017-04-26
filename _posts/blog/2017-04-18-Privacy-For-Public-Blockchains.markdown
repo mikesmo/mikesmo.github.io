@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Permissioned Blocks: Bringing Privacy To Public Blockchains"
-date:   2017-04-18 18:00:00
+date:   2017-04-18
 categories: blog
 ---
 
 For the last 6 months I have been pretty busy developing a new technology that I've called <b>Permissioned Blocks</b>. This technology brings 
-privacy, security and confidentiality to using smart contracts on public blockchains such as Ethereum. 
+privacy, security and confidentiality to using smart contracts on public blockchains such as [Ethereum](https://www.ethereum.org/). 
 
 Today, I am proud to say that I have completed the first working version of this technology and the following video to demonstrate permissioned blocks in action.
 
@@ -16,7 +16,7 @@ Today, I am proud to say that I have completed the first working version of this
 
 The white paper draft detailing the engineering behind the technology that can be found here:
 
-[Permissioned Blocks White Paper](https://github.com/autocontracts/permissioned-blocks) 
+[White Paper - Permissioned Blocks](https://github.com/autocontracts/permissioned-blocks) 
 
 Highlights:
 
