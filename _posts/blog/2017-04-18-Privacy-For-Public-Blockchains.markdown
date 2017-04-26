@@ -16,7 +16,7 @@ Today, I am proud to say that I have completed the first working version of this
 
 The white paper draft detailing the engineering behind the technology that can be found here:
 
-[Permissioned Blocks White Paper](https://github.com/autocontracts/permissioned-blocks/blob/feature/initial_draft/whitepaper.md) 
+[Permissioned Blocks White Paper](https://github.com/autocontracts/permissioned-blocks) 
 
 Highlights:
 
