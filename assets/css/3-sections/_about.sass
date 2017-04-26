@@ -1,48 +1,14 @@
 
-+MQ(S)
-  .about-lock
+.about-lock
+  margin: auto
+  .face-img
+    +size(180px)
+    +display(flex)
     margin: auto
-    .face-img
-      +size(180px)
-      +display(flex)
-      margin: auto
-      border-radius: 60%
-      background: url(../img/face.JPG) no-repeat
+    border-radius: 60%
+    background: url(../img/face.JPG) no-repeat
 
-
-    .face1-img
-      +size(180px)
-      border-radius: 50%
-      background: url(../img/ms_logo.png)
-      margin: auto
-    .flip-container
-      perspective: 1000
-      &:hover .flipper, &.hover .flipper
-        transform: rotateY(180deg)
-      +size(200px)
-      border-radius: 50%
-      +order(3)
-    .front, .back
-      +size(200px)
-      border-radius: 50%
-
-    .flipper
-      transition: 0.6s
-      transform-style: preserve-3d
-      position: relative
-
-    .front, .back
-      backface-visibility: hidden
-      position: absolute
-      top: 0
-      left: 0
-
-    .front
-      z-index: 2
-      transform: rotateY(0deg)
-
-    .back
-      transform: rotateY(180deg)
++MQ(S)
 
     .flaticon-cogwheel28
       display: none
@@ -55,26 +21,6 @@
 
 
 +MQ(M)
-  .about-lock
-    max-width: 680px
-    +display(flex)
-    margin: 0 auto
-    +align-items(center)
-    +justify-content(space-between)
-
-    .flaticon-cogwheel28
-      +order(1)
-      display: block
-    .flaticon-computer1
-      +order(2)
-      display: block
-    .flaticon-hosting
-      +order(4)
-      display: block
-    .flaticon-computers13
-      +order(5)
-      display: block
-
     .glyph-icon
       &:hover
         +transform(scale(1.2))
@@ -91,10 +37,8 @@
   .about-lock
     max-width: 980px
 
-
-
 .blurb
-  max-width: 750px
+  max-width: 800px
   padding: 0 15px
   margin: 50px auto
   font-size: 22px
@@ -102,9 +46,22 @@
   text-align: center
 
 .blurb-skills
-  max-width: 750px
+  max-width: 800px
   padding: 0 15px
   margin: 50px auto
   font-size: 18px
   font-weight: 30
   text-align: center
+
++MQ(S)
+  .presentation-photo
+    text-align: center
+    img
+      width: 250px
+
++MQ(M)
+  .presentation-photo
+    text-align: center
+    img
+      width: 400px
+

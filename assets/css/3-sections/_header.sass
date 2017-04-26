@@ -1,19 +1,4 @@
-
-
-
 +MQ(L)
-  .logo
-    +size(70px)
-    background: url(../img/ms_logo_small.png) center center
-    background-size: 70px 47px
-    background-repeat: no-repeat
-    position: fixed
-    left: 5px
-    top: 0px
-    padding-right: 5px
-    padding-bottom: 10px
-    margin-bottom: 10px
-    z-index: 888
 
   a.back-to-top
     display: none
@@ -34,31 +19,20 @@
 +MQ(S)
   .arrow
     display: none
-  .logo
-    +size(90px)
-    background: url(../img/ms_logo_small.png) center center
-    width: 150px
-    height: 120px
-    //background-size: 150px 120px
-    background-repeat: no-repeat
-    float: left
-    margin: 30px 0 0 30px
-
 
   a.back-to-top
     display:none
 
-
-
 header
   +MQ(S)
-    height: 300px
   +MQ(M)
-    height: 390px
+    height: 300px
+    background: url(../img/pebbles2.jpg) center center
+    background-size: cover
   +MQ(L)
-    height: 450px
-  background: url(../img/pebbles2.jpg) center center
-  background-size: cover
+    height: 350px
+    background: url(../img/pebbles2.jpg) center center
+    background-size: cover
 
 
   nav
@@ -81,23 +55,26 @@ header
   h1
     text-align: center
 
-    color: rgba(255, 255, 255, 0.85)
+
     text-transform: uppercase
     letter-spacing: 0.05cm
     margin-bottom: 20px
     clear: both
     +MQ(S)
+      color: #303e49
       padding-top: 20px
       font:
-        size: 32px
+        size: 20px
         weight: 350
     +MQ(M)
+      color: rgba(255, 255, 255, 0.85)
       padding-top: 10px
       font:
-        size: 30px
+        size: 20px
         weight: 350
 
     +MQ(L)
+      color: rgba(255, 255, 255, 0.85)
       padding-top: 50px
       font:
         size: 72px
@@ -109,9 +86,10 @@ header
         padding: 0.2em 0.5em
       +MQ(M)
         padding: 0.1em 0.2em
+        border: rgba(0, 0, 0,0.5) solid 10px
       +MQ(L)
         padding: 0.2em 0.5em
-      border: rgba(0, 0, 0,0.5) solid 10px
+        border: rgba(0, 0, 0,0.5) solid 10px
 
 
 
