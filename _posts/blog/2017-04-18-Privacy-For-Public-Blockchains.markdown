@@ -10,7 +10,7 @@ privacy, security and confidentiality to using smart contracts on public blockch
 
 Today, I am proud to say that I have completed the first working version of this technology and the following video to demonstrate permissioned blocks in action.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Zt9DIopmzbA" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kZNM1GLFdxk" frameborder="0" allowfullscreen></iframe>
 
 <br>
 
