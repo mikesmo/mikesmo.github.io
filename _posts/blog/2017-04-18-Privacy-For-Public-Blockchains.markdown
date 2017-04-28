@@ -5,8 +5,8 @@ date:   2017-04-18
 categories: blog
 ---
 
-For the last 6 months I have been pretty busy developing a new technology that I've called <b>Permissioned Blocks</b>. This technology brings 
-privacy, security and confidentiality to smart contracts on public blockchains such as [Ethereum](https://www.ethereum.org/). 
+For the last 6 months I have been pretty busy developing a new technology that I've called <b>Permissioned Blocks</b>. This technology allows publishers to grant digital content rights in a decentralised p2p manner 
+and also brings confidentiality to smart contract information when used on public blockchains such as [Ethereum](https://www.ethereum.org/). 
 
 Today, I am proud to say that I have completed the first working version and the following video to demonstrates permissioned blocks in action.
 
