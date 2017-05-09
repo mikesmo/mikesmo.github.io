@@ -8,13 +8,13 @@ categories: blog
 For the last 6 months I have been pretty busy developing a new technology that I've called <b>Permissioned Blocks</b>. This technology allows publishers to grant digital content rights in a decentralised p2p manner 
 and also brings confidentiality to smart contract information when used on public blockchains such as [Ethereum](https://www.ethereum.org/). 
 
-Today, I am proud to say that I have completed the first working version and the following video to demonstrates permissioned blocks in action.
+Today, I am proud to say that I have completed the first working version and the following video that demonstrates permissioned blocks in action.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kZNM1GLFdxk" frameborder="0" allowfullscreen></iframe>
 
 <br>
 
-The white paper draft detailing the engineering designs that can be found here:
+The white paper draft detailing the engineering can be found here:
 
 [White Paper - Permissioned Blocks](https://github.com/autocontracts/permissioned-blocks) 
 
@@ -27,7 +27,7 @@ Highlights:
 - Compatible with any Turing Complete blockchain (e.g. [Ethereum](https://www.ethereum.org/), [Hyperledger](https://www.hyperledger.org/)). Decoupled and modular design.
 - Multi user/role security capability model.  
 
-A docker image will be provided soon on Github, so you can also run this demo and test its functionality.
+A docker image will be provided soon on Github, so developers can run the demo and test it out.
 
 Please feel free to post any comments or questions below.
 
