@@ -1,6 +1,4 @@
-=============================
-Michael's Blog
-=============================
+# Michael's Blog
 
 [Live Website](https://mikesmo.github.io/)
 
@@ -28,6 +26,7 @@ To use this project, you'll need the following things installed on your machine.
 This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
 
 ```shell
+$ cd /Users/michaelsmolenski/dev-blog/mikesmo.github.io
 $ rvm use 2.1.4
 $ nvm use 4.3
 $ gem install jekyll-paginate  
