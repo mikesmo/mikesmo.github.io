@@ -825,7 +825,6 @@ h2, header nav a, header .kicker, footer .lockup a, #h_small #nav_small a, #h_sm
   .logo {
     height: 70px;
     width: 70px;
-    background: url(../img/GOC1.png) center center;
     background-size: 70px 47px;
     background-repeat: no-repeat;
     position: fixed;
@@ -855,7 +854,6 @@ h2, header nav a, header .kicker, footer .lockup a, #h_small #nav_small a, #h_sm
   .logo {
     height: 90px;
     width: 90px;
-    background: url(../img/GOC1.png) center center;
     width: 88px;
     height: 47px;
     background-size: 88px 47px;
@@ -864,17 +862,17 @@ h2, header nav a, header .kicker, footer .lockup a, #h_small #nav_small a, #h_sm
     margin: 30px 0 0 30px; } }
 
 header {
-  background: url(../img/galway2.jpg) center center;
+  background: url(../img/pebbles2.jpg) center center;
   background-size: cover; }
   @media only screen and (min-width: 220px) {
     header {
-      height: 300px; } }
+      height: 250px; } }
   @media only screen and (min-width: 650px) {
     header {
-      height: 390px; } }
+      height: 350px; } }
   @media only screen and (min-width: 1070px) {
     header {
-      height: 450px; } }
+      height: 350px; } }
   header nav {
     float: right;
     margin: 30px 30px 30px; }
@@ -1513,7 +1511,7 @@ form {
 
 #h_small {
   height: 170px;
-  background: url(../img/galway2.jpg) center center;
+  background: url(../img/pebbles2.jpg) center center;
   background-size: cover; }
   #h_small #nav_small {
     float: right;
