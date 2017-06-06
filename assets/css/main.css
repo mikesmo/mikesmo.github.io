@@ -816,7 +816,7 @@ pre {
   padding: 20px;
   white-space: pre-wrap; }
 
-h2, header nav a, header .kicker, footer .lockup a, #h_small #nav_small a, #h_small .kicker {
+h2, header nav a, header .kicker, footer .lockup a, #nav_small a, #nav_small .kicker {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase; }
@@ -1510,30 +1510,33 @@ form {
     margin-top: 30px; } }
 
 #h_small {
-  height: 170px;
+  height: 90px;
   background: url(../img/pebbles2.jpg) center center;
   background-size: cover; }
-  #h_small #nav_small {
-    float: right;
-    margin: 30px 30px 30px; }
-    #h_small #nav_small a {
-      display: inline-block;
-      margin-left: 10px;
-      color: rgba(0, 0, 0, 0.5); }
-      #h_small #nav_small a:hover {
-        color: black; }
-  #h_small #h1_small {
+
+#nav_small {
+  float: right;
+  position: relative;
+  top: -30px;
+  left: -15px; }
+  #nav_small a {
+    display: inline-block;
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.5); }
+    #nav_small a:hover {
+      color: black; }
+  #nav_small #h1_small {
     display: inline-block;
     font-size: 72px;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
     letter-spacing: 0.05cm; }
-    #h_small #h1_small span {
+    #nav_small #h1_small span {
       display: inline-block;
       padding: 0.2em 0.5em;
       border: rgba(0, 0, 0, 0.5) solid 10px; }
-  #h_small .kicker {
+  #nav_small .kicker {
     text-align: center;
     line-height: 1;
     color: rgba(0, 0, 0, 0.5); }
