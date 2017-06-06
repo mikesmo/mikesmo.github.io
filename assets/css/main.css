@@ -1414,7 +1414,7 @@ form {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    margin: 10 auto;
+    margin: 0 auto;
     -webkit-box-align: center;
     box-align: center;
     -moz-align-items: center;
@@ -1429,16 +1429,16 @@ form {
     -o-justify-content: space-between;
     justify-content: space-between;
     -ms-flex-pack: justify;
-    padding-left: 10px; }
+    padding-left: 0px; }
   .title:hover {
-    padding-left: 10px; }
+    padding-left: 0px; }
   .post-title {
     font-size: 28px;
     letter-spacing: -1px;
     line-height: 1;
-    padding-left: 10px; }
+    padding-left: 0px; }
     .post-title:hover {
-      padding-left: 10px; }
+      padding-left: 0px; }
   .post-meta {
     margin-bottom: 0px;
     padding-bottom: 20px;
