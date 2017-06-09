@@ -765,12 +765,12 @@ hr {
   height: 0; }
 
 a {
-  color: #303e49;
+  color: #3481bd;
   text-decoration: none;
   outline: 0; }
 
 a:hover, a:focus {
-  color: #587287; }
+  color: #7cb1db; }
 
 ::-moz-selection {
   color: #587287; }
