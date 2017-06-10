@@ -46,31 +46,23 @@
   a.back-to-top
     display:none
 
-
-  
-
 header
   +MQ(S)
-    height: 250px
+    height: 150px
   +MQ(M)
-    height: 350px
+    height: 200px
   +MQ(L)
-    height: 350px
+    height: 200px
   background: url(../img/pebbles2.jpg) center center
   background-size: cover
 
-
   nav
-    float: right
-    margin: 30px 30px 30px
-
     a
       +MQ(M)
         display: inline-block
       margin-left: 20px
       color: rgba(0, 0, 0,0.5)
       @extend %small-bold
-
 
       &:hover
         color: rgba(0,0,0,1)

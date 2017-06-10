@@ -866,24 +866,21 @@ header {
   background-size: cover; }
   @media only screen and (min-width: 220px) {
     header {
-      height: 250px; } }
+      height: 150px; } }
   @media only screen and (min-width: 650px) {
     header {
-      height: 350px; } }
+      height: 200px; } }
   @media only screen and (min-width: 1070px) {
     header {
-      height: 350px; } }
-  header nav {
-    float: right;
-    margin: 30px 30px 30px; }
-    header nav a {
-      margin-left: 20px;
-      color: rgba(0, 0, 0, 0.5); }
-      @media only screen and (min-width: 650px) {
-        header nav a {
-          display: inline-block; } }
-      header nav a:hover {
-        color: black; }
+      height: 200px; } }
+  header nav a {
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.5); }
+    @media only screen and (min-width: 650px) {
+      header nav a {
+        display: inline-block; } }
+    header nav a:hover {
+      color: black; }
   header h1 {
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
@@ -1507,10 +1504,13 @@ form {
   background: url(../img/pebbles2.jpg) center center;
   background-size: cover; }
 
+#nav_small_default {
+  float: right;
+  padding-right: 10px; }
+
 #nav_small {
   float: right;
   position: relative;
-  padding-top: 10px;
   font-size: 12px;
   top: -30px;
   left: -15px; }
