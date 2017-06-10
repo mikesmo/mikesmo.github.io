@@ -12,7 +12,6 @@ and also brings confidentiality to smart contract information when used on publi
 
 Today, I am proud to say that I have completed the first working version and the following video that demonstrates permissioned blocks in action.
 
-
 <iframe class="honeycombpic" src="https://www.youtube.com/embed/kZNM1GLFdxk" frameborder="0" allowfullscreen></iframe>
 
 Highlights:
