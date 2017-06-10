@@ -879,9 +879,6 @@ header {
     header nav a {
       margin-left: 20px;
       color: rgba(0, 0, 0, 0.5); }
-      @media only screen and (min-width: 220px) {
-        header nav a {
-          display: none; } }
       @media only screen and (min-width: 650px) {
         header nav a {
           display: inline-block; } }
@@ -896,23 +893,19 @@ header {
     clear: both; }
     @media only screen and (min-width: 220px) {
       header h1 {
-        padding-top: 20px;
         font-size: 32px;
         font-weight: 350; } }
     @media only screen and (min-width: 650px) {
       header h1 {
-        padding-top: 10px;
         font-size: 30px;
         font-weight: 350; } }
     @media only screen and (min-width: 1070px) {
       header h1 {
-        padding-top: 50px;
         font-size: 72px;
         font-weight: 700; } }
     header h1 span {
       display: inline-block;
-      padding: 0.2em 0.5em;
-      border: rgba(0, 0, 0, 0.5) solid 10px; }
+      padding: 0.2em 0.5em; }
       @media only screen and (min-width: 220px) {
         header h1 span {
           padding: 0.2em 0.5em; } }
@@ -949,7 +942,7 @@ footer {
         color: black; }
 
 .about-lock {
-  margin: auto; }
+  margin: 30px auto; }
   .about-lock .face-img {
     height: 180px;
     width: 180px;
@@ -993,7 +986,7 @@ footer {
 .blurb {
   max-width: 800px;
   padding: 0 15px;
-  margin: 50px auto;
+  margin: auto;
   font-size: 22px;
   font-weight: 30;
   text-align: center; }
@@ -1001,7 +994,7 @@ footer {
 .blurb-skills {
   max-width: 800px;
   padding: 0 15px;
-  margin: 50px auto;
+  margin: auto;
   font-size: 18px;
   font-weight: 30;
   text-align: center; }
@@ -1517,6 +1510,8 @@ form {
 #nav_small {
   float: right;
   position: relative;
+  padding-top: 10px;
+  font-size: 12px;
   top: -30px;
   left: -15px; }
   #nav_small a {
