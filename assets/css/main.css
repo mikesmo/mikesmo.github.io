@@ -965,14 +965,12 @@ footer {
 
 @media only screen and (min-width: 650px) {
   .glyph-icon:hover {
-    -webkit-transform: scale(1.2);
     transform: scale(1.2); }
   .glyph-icon:before {
     display: block;
     font-size: 60px;
     line-height: 70px;
     color: #303e49;
-    -webkit-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s;
     margin-left: 0; } }
 
@@ -1021,7 +1019,6 @@ footer {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: distribute;
   box-pack: distribute;
   -moz-justify-content: space-around;
   -ms-justify-content: space-around;
@@ -1029,14 +1026,12 @@ footer {
   justify-content: space-around;
   -ms-flex-pack: distribute; }
   .social-links .glyph-icon:hover {
-    -webkit-transform: scale(1.2);
     transform: scale(1.2); }
   .social-links .glyph-icon:before {
     display: block;
     font-size: 60px;
     line-height: 70px;
     color: #303e49;
-    -webkit-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s;
     margin-left: 0; }
 
@@ -1063,7 +1058,6 @@ footer {
   font-weight: 300; }
 
 .biglink:hover {
-  -webkit-transform: scale(1.02);
   transform: scale(1.02); }
 
 *, *:after, *:before {
@@ -1160,30 +1154,16 @@ footer {
         visibility: hidden; }
       .cssanimations .cd-timeline-img.bounce-in {
         visibility: visible;
-        -webkit-animation: cd-bounce-1 0.6s;
         animation: cd-bounce-1 0.6s; } }
-
-@-webkit-keyframes cd-bounce-1 {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.5); }
-  60% {
-    opacity: 1;
-    -webkit-transform: scale(1.2); }
-  100% {
-    -webkit-transform: scale(1); } }
 
 @keyframes cd-bounce-1 {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.5);
     transform: scale(0.5); }
   60% {
     opacity: 1;
-    -webkit-transform: scale(1.2);
     transform: scale(1.2); }
   100% {
-    -webkit-transform: scale(1);
     transform: scale(1); } }
 
 .cd-timeline-content {
@@ -1277,58 +1257,30 @@ footer {
         visibility: hidden; }
       .cssanimations .cd-timeline-content.bounce-in {
         visibility: visible;
-        -webkit-animation: cd-bounce-2 0.6s;
         animation: cd-bounce-2 0.6s; } }
 
 @media only screen and (min-width: 1070px) {
   .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
-    -webkit-animation: cd-bounce-2-inverse 0.6s;
     animation: cd-bounce-2-inverse 0.6s; } }
-
-@-webkit-keyframes cd-bounce-2 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-100px); }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateX(20px); }
-  100% {
-    -webkit-transform: translateX(0); } }
 
 @keyframes cd-bounce-2 {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-100px);
     transform: translateX(-100px); }
   60% {
     opacity: 1;
-    -webkit-transform: translateX(20px);
     transform: translateX(20px); }
   100% {
-    -webkit-transform: translateX(0);
     transform: translateX(0); } }
-
-@-webkit-keyframes cd-bounce-2-inverse {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(100px); }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateX(-20px); }
-  100% {
-    -webkit-transform: translateX(0); } }
 
 @keyframes cd-bounce-2-inverse {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(100px);
     transform: translateX(100px); }
   60% {
     opacity: 1;
-    -webkit-transform: translateX(-20px);
     transform: translateX(-20px); }
   100% {
-    -webkit-transform: translateX(0);
     transform: translateX(0); } }
 
 form {
@@ -1378,14 +1330,12 @@ form {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
   box-align: center;
   -moz-align-items: center;
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  -webkit-box-pack: justify;
   box-pack: justify;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
@@ -1405,14 +1355,12 @@ form {
     display: -ms-flexbox;
     display: flex;
     margin: 0 auto;
-    -webkit-box-align: center;
     box-align: center;
     -moz-align-items: center;
     -ms-align-items: center;
     -o-align-items: center;
     align-items: center;
     -ms-flex-align: center;
-    -webkit-box-pack: justify;
     box-pack: justify;
     -moz-justify-content: space-between;
     -ms-justify-content: space-between;
@@ -1563,7 +1511,6 @@ form {
       left: 0px;
       height: 100%;
       background: rgba(201, 144, 101, 0.9);
-      -webkit-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s; }
     .thumb-container .thumb-unit:hover .thumb-overlay {
       position: absolute;
